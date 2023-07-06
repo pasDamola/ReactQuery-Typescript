@@ -1,5 +1,5 @@
 import { Button, Input, Flex, Checkbox, Heading } from "@chakra-ui/react";
-import { Todo } from "../api";
+import { Todo } from "../services/api";
 function TodoListItems() {
   return (
     <>
