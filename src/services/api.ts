@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import axios from "axios";
 
 export const BASE_URL =
@@ -9,8 +11,8 @@ export interface Todo {
   done: boolean;
 }
 
-export async function getCabins(): Promise<Todo[]> {
-  const todos: Todo[] = await axios.get(BASE_URL);
+export async function getTodos(): Promise<Todo[]> {
+  const { data: todos } = await axios.get(BASE_URL);
 
   return todos;
 }
